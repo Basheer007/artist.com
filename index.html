@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="blinder-container">
+        <div class="blinder"></div>
+        <div class="blinder"></div>
+        <div class="blinder"></div>
+        <div class="blinder"></div>
+        <div class="blinder"></div>
+      </div>
+
+      <svg viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              type="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+              result="goo"
+            />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+
+        <mask
+          id="mask0_1_32"
+          style="mask-type: alpha"
+          maskUnits="userSpaceOnUse"
+          x="0"
+          y="0"
+          width="86"
+          height="86"
+        >
+          <circle cx="43" cy="43.1161" r="42.4299" fill="white" />
+        </mask>
+
+        <g mask="url(#mask0_1_32)" filter="url(#goo)">
+          <circle
+            cx="43"
+            cy="43.1161"
+            r="40.4299"
+            stroke="white"
+            stroke-width="4"
+          />
+          <circle cx="43" cy="-25.3367" r="45.8453" fill="white" />
+          <path
+            class="drip-loader"
+            d="M43.9141 -15.413C43.5625 -16.2057 42.4375 -16.2057 42.0859 -15.413L34.2829 2.17821C33.4045 3.67557 32.9009 5.41937 32.9009 7.28079C32.9009 12.8584 37.4224 17.3799 43 17.3799C48.5776 17.3799 53.0991 12.8584 53.0991 7.28079C53.0991 5.41928 52.5954 3.6754 51.717 2.17799L43.9141 -15.413Z"
+            fill="white"
+          />
+        </g>
+      </svg>
+    </div>
+
+    <div class="wrapper">
+      <header class="header">
+        <nav class="navbar container">
+          <div class="logo-container">
+            <a href="index.html"
+              ><img src="images/logo.svg" alt="Logo" class="logo"
+            /></a>
+          </div>
+
+          <div class="menu-btn">
+            <div class="lines line-1"></div>
+            <div class="lines line-2"></div>
+          </div>
+
+          <div class="menu-container">
+            <div class="slider-container">
+              <div class="sliders"></div>
+              <div class="sliders"></div>
+              <div class="sliders"></div>
+              <div class="sliders"></div>
+              <div class="sliders"></div>
+            </div>
+
+            <ul class="navlinks">
+              <li><a href="#home" class="links">Home</a></li>
+              <li><a href="#artworks" class="links">Art Works</a></li>
+              <li><a href="#artspeaks" class="links">Art speaks</a></li>
+              <li><a href="#About-Me" class="links">About me</a></li>
+              <li><a href="#testimonial" class="links">testimonial</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <!-- ! main container  -->
+
+    <main class="main" id="home">
+      <div class="container main-container">
+        <!-- ! right column -->
+        <div class="hero-left-col">
+          <div class="heading-container">
+            <h1 class="title">Iam an,<span>Artist</span></h1>
+            <p class="title-discription">
+              Explore the gallery, where every stroke narrates a unique
+              tale,inviting you on a journey through the boundless realms of
+              artistry.
+            </p>
+
+            <div class="btn-container">
+              <a href="#artworks" class="btn cta">See Our Work</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ! right column -->
+
+        <div class="hero-right-col">
+          <div class="hero-img-container">
+            <img src="images/hero.png" alt="hero image" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="artWorks" id="artworks">
+      <div class="container">
+        <div class="cards-container">
+          <!-- ! card-1 -->
+          <div class="title-cards">
+            <div class="card-logo-container">
+              <img src="images/card-1.jfif" alt="card-logo" />
+            </div>
+            Portraits
+          </div>
+          <!-- ! card-2 -->
+          <div class="title-cards">
+            <div class="card-logo-container">
+              <img src="images/card-2.jfif" alt="card-logo" />
+            </div>
+            Paintings
+          </div>
+          <!-- ! card-3 -->
+          <div class="title-cards">
+            <div class="card-logo-container">
+              <img src="images/card-3.jfif" alt="card-logo" />
+            </div>
+            Illustraitions
+          </div>
+        </div>
+
+        <div class="grid-gallery-conatiner">
+          <div class="grid-left-column">
+            <!-- !grid container 1-->
+            <div class="grid-container-1">
+              <div class="grid-item-1 grid-item"></div>
+              <div class="grid-item-2 grid-item"></div>
+              <div class="grid-item-3 grid-item"></div>
+            </div>
+            <!-- !grid container 2-->
+            <div class="grid-container-2">
+              <div class="grid-item-4 grid-item"></div>
+              <div class="grid-item-5 grid-item"></div>
+              <div class="grid-item-6 grid-item"></div>
+            </div>
+          </div>
+
+          <div class="grid-right-column">
+            <!-- !grid container 3-->
+            <div class="grid-container-3">
+              <div class="grid-item-7 grid-item"></div>
+              <div class="grid-item-8 grid-item"></div>
+              <div class="grid-item-9 grid-item"></div>
+              <div class="grid-item-10 grid-item"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="every-art-speaks" id="artspeaks">
+      <div class="container art-speaks-container">
+        <div class="art-speaks-right-col">
+          <!-- !showcase container-->
+          <div class="showcase-data-container data-container">
+            <h2 class="showcase-title card-title">Every Art Speaks</h2>
+            <p class="showcase-disc card-disc">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui
+              delectus corporis minima facilis debitis, voluptatum iste cumque,
+              fuga nulla rem impedit sit. Aliquam, nulla eius beatae libero est
+              recusandae quae?
+            </p>
+          </div>
+        </div>
+
+        <div class="art-speaks-left-col">
+          <!-- !showcase container image-->
+          <div class="image-showcase">
+            <img
+              src="images/art-speaks-card.jpg"
+              alt="showcase"
+              class="showcase"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-me-section" id="About-Me">
+      <div class="container aboutme-container">
+        <div class="about-me-right-col">
+          <!-- !about me container-->
+          <div class="aboutme-data-container data-container">
+            <h2 class="aboutme-title card-title">About Me</h2>
+            <p class="aboutme-disc card-disc">
+              Basheer Ahamed , born in India, is a contemporary artist
+              celebrated for her unique blend of abstract expressionism and
+              surrealism. Her vibrant canvases, showcased in international
+              exhibitions from London to Tokyo, invite viewers into a world
+              where emotions and colors converge. With awards like the Golden
+              Brush for Innovation, Rodriguez's art transcends boundaries,
+              leaving an indelible mark on the global art scene.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-me-left-col">
+          <!-- !showcase container image-->
+          <div class="image-showcase about-showcase">
+            <img src="images/about-me.jfif" alt="showcase" class="showcase" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section" id="testimonial">
+      <div class="container">
+        <div class="what-people-says-container grid-testimonial">
+          <h2 class="testimonial-title card-title">What people Says</h2>
+
+          <div class="testimonial-grid-container">
+            <div class="testimonial-grid testimonial-1">
+              <div class="testimonial-logo-container">
+                <img src="images/card-1.jfif" alt="card-logo" />
+              </div>
+              <p class="testimonial-details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae harum temporibus, hic consectetur incidunt mollitia
+                beatae voluptatem aperiam quaerat praesentium.
+              </p>
+            </div>
+            <div class="testimonial-grid testimonial-2">
+              <div class="testimonial-logo-container">
+                <img src="images/card-1.jfif" alt="card-logo" />
+              </div>
+              <p class="testimonial-details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae harum temporibus, hic consectetur incidunt mollitia
+                beatae voluptatem aperiam quaerat praesentium.
+              </p>
+            </div>
+            <div class="testimonial-grid testimonial-3">
+              <div class="testimonial-logo-container">
+                <img src="images/card-2.jfif" alt="card-logo" />
+              </div>
+              <p class="testimonial-details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae harum temporibus, hic consectetur incidunt mollitia
+                beatae voluptatem aperiam quaerat praesentium.
+              </p>
+            </div>
+            <div class="testimonial-grid testimonial-4">
+              <div class="testimonial-logo-container">
+                <img src="images/card-1.jfif" alt="card-logo" />
+              </div>
+              <p class="testimonial-details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae harum temporibus, hic consectetur incidunt mollitia
+                beatae voluptatem aperiam quaerat praesentium.
+              </p>
+            </div>
+            <div class="testimonial-grid testimonial-5">
+              <div class="testimonial-logo-container">
+                <img src="images/card-2.jfif" alt="card-logo" />
+              </div>
+              <p class="testimonial-details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae harum temporibus, hic consectetur incidunt mollitia
+                beatae voluptatem aperiam quaerat praesentium.
+              </p>
+            </div>
+            <div class="testimonial-grid testimonial-6">
+              <div class="testimonial-logo-container">
+                <img src="images/card-3.jfif" alt="card-logo" />
+              </div>
+              <p class="testimonial-details">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae harum temporibus, hic consectetur incidunt mollitia
+                beatae voluptatem aperiam quaerat praesentium.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! GSAP Scroll trigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+  </body>
+</html>
