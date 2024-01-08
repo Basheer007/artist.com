@@ -62,7 +62,7 @@ body {
         var(--background-clr),
         var(--green-clr)
       );
-      height: 100vh;
+      height: 100%;
       flex: 1;
       transform-origin: top;
     }
