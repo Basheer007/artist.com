@@ -193,64 +193,82 @@ gallery(".grid-item-8", imageObject.imagearray8);
 gallery(".grid-item-9", imageObject.imagearray9);
 gallery(".grid-item-10", imageObject.imagearray10);
 
-// scroll trigger
-let timeLine = gsap.timeline();
+// // scroll trigger
+// let timeLine = gsap.timeline();
 
-timeLine.from(".title-cards", {
-  scrollTrigger: {
-    trigger: ".artWorks",
-    start: "top 500",
-    end: "top 300",
-    scrub: 2,
-  },
-  stagger: {
-    amount: 0.5,
-  },
-  opacity: 0,
-  y: -50,
-  duration: 1,
-});
-timeLine.from(".grid-container-1", {
-  scrollTrigger: {
-    trigger: ".grid-container-1",
-    start: "top 500",
-    end: "top 300",
-    scrub: 2,
-  },
-  opacity: 0,
-  y: -50,
-  duration: 1,
-});
-timeLine.from(".grid-item", {
-  scrollTrigger: {
-    trigger: ".grid-container-1",
-    start: "top bottom",
-    end: "bottom center",
-    scrub: 4,
-  },
-  opacity: 0,
-  scale: 0,
-  stagger: {
-    amount: 0.7,
-  },
-});
-timeLine.from(".image-showcase", {
-  scrollTrigger: {
-    trigger: ".every-art-speaks",
-    start: "top center",
-    end: "bottom 300",
-    scrub: 4,
-  },
-  opacity: 0,
-  scale: 0,
-});
-timeLine.from(".testimonial-grid", {
-  scrollTrigger: {
-    trigger: ".testimonial-grid-container",
-    start: "top bottom",
-    end: "top center",
-    scrub: 5,
-  },
-  opacity: 0,
-  scale: 0,
+// timeLine.from(".title-cards", {
+//   scrollTrigger: {
+//     trigger: ".artWorks",
+//     start: "top 500",
+//     end: "top 300",
+//     scrub: 2,
+//   },
+//   stagger: {
+//     amount: 0.5,
+//   },
+//   opacity: 0,
+//   y: -50,
+//   duration: 1,
+// });
+// timeLine.from(".grid-container-1", {
+//   scrollTrigger: {
+//     trigger: ".grid-container-1",
+//     start: "top 500",
+//     end: "top 300",
+//     scrub: 2,
+//   },
+//   opacity: 0,
+//   y: -50,
+//   duration: 1,
+// });
+// timeLine.from(".grid-item", {
+//   scrollTrigger: {
+//     trigger: ".grid-container-1",
+//     start: "top bottom",
+//     end: "bottom center",
+//     scrub: 4,
+//   },
+//   opacity: 0,
+//   scale: 0,
+//   stagger: {
+//     amount: 0.7,
+//   },
+// });
+// timeLine.from(".image-showcase", {
+//   scrollTrigger: {
+//     trigger: ".every-art-speaks",
+//     start: "top center",
+//     end: "bottom 300",
+//     scrub: 4,
+//   },
+//   opacity: 0,
+//   scale: 0,
+// });
+// timeLine.from(".testimonial-grid", {
+//   scrollTrigger: {
+//     trigger: ".testimonial-grid-container",
+//     start: "top bottom",
+//     end: "top center",
+//     scrub: 5,
+//   },
+//   opacity: 0,
+//   scale: 0,
+// });
+
+// ! navlinks active on scroll
+let currentSection = "home";
+const divider = document.querySelectorAll(".divider");
+window.addEventListener("scroll", () => {
+  divider.forEach((sectionEl) => {
+    if (window.scrollY >= sectionEl.offsetTop) {
+      currentSection = sectionEl.id;
+    }
+  });
+
+  links.forEach((link) => {
+    if (link.href.includes(currentSection)) {
+      document.querySelector(".showlink").classList.remove("showlink");
+      link.classList.add("showlink");
+    }
+  });
 });
